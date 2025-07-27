@@ -64,6 +64,3 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () =>{
     console.log(`I am listening on PORT ${PORT}`)
 })
-
-//mongodb+srv://kozlovaovk1987:<db_password>@cluster0.xztzgab.mongodb.net/
-//Password - aFolgdhNVjxkpfuP  , Username - kozlovaovk1987

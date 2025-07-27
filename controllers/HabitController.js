@@ -16,8 +16,6 @@ module.exports.getHabits = async (req, res) => {
 module.exports.createHabit = async (req, res) => {
   try {
     const userId = req.auth?.sub;
-    // const userId = "test-user-123"; // временный userId
-    // const userId = req.auth.sub; // extracted from access token
     const { name, goal } = req.body;
 
     const newHabit = new HabitModel({

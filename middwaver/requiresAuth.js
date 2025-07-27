@@ -1,4 +1,3 @@
-// middleware/requiresAuth.js
 function requiresAuthMiddleware(req, res, next) {
   if (req.oidc?.isAuthenticated?.()) {
     return next();
