@@ -1,8 +1,10 @@
 const { Router } = require('express');
+
 const router = Router();
 const habitController = require('../controllers/HabitController');
 
 router.get('/', habitController.getHabits);
+
 router.post('/', habitController.createHabit);
 
 //Update Habit
