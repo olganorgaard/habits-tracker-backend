@@ -10,7 +10,7 @@ require('dotenv').config();
 // CORS
 const cors = require('cors');
 app.use(cors({
-  origin: 'http://localhost:3000', 
+  origin: 'https://habits-tracker-app.netlify.app', 
   credentials: true,               
 }));
 
