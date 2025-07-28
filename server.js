@@ -16,8 +16,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions)); // <-- this line enables preflight support
-
+app.options('*', cors(corsOptions)); 
 
 // JWT Middleware to protect API
 const checkJwt = jwt({

@@ -33,7 +33,7 @@ module.exports.createHabit = async (req, res) => {
   }
 };
 
-// PUT /habits/:id - Update habit name or goal
+// PUT - Update habit name or goal
 module.exports.updateHabit = async (req, res) => {
   try {
     const userId = req.auth?.sub;
