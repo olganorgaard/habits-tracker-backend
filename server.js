@@ -8,11 +8,16 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 // CORS
-const cors = require('cors');
-app.use(cors({
-  origin: 'https://habits-tracker-app.netlify.app', 
-  credentials: true,               
-}));
+const corsOptions = {
+  origin: 'https://habits-tracker-app.netlify.app',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // <-- this line enables preflight support
+
 
 // JWT Middleware to protect API
 const checkJwt = jwt({
